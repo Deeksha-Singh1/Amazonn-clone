@@ -6,8 +6,12 @@ import Home from './Home';
 import Checkout from './Checkout';
 import Login from './Login';
 import {auth} from "./firebase";
+import Payment from './Payment';
 import { useStateValue } from './StateProvider';
+import {loadStripe} from "@stripe/stripe-js";
+import {Elements} from "@stripe/react-stripe-js";
 
+const promise = loadStripe('pk_test_51JyCR8SEnk29pgveWjc1DjxlPhd1MnFxbTnRS6QhQmfnxn8orHNQ9Yx0X7aFsJC8xnxlgLPKK7NSa06fintDGH5q00GW4Fo2vR' );
 
 function App() {
 
@@ -30,11 +34,7 @@ function App() {
         dispatch({
           type: 'SET_USER',
           user: null
-        })
-
-      }
-    })
-  }, [])
+        })} })}, [])
 
   return (
     <Router>
@@ -48,6 +48,15 @@ function App() {
          <Route path="/login">
            <Login/>
          </Route>
+
+         <Route path="/payment">
+           <Elements stripe={promise}>
+              <Payment/>
+           </Elements>
+          
+           
+         </Route>
+
          <Route path="/">
           
            <Home />
@@ -60,6 +69,4 @@ function App() {
 
      </Router>
   );
-}
-
-export default App;
+}export default App;
