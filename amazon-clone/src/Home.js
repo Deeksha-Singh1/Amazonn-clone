@@ -65,6 +65,32 @@ function Home() {
         </Product>
     </div>
 
+    
+   <div className="home__row">
+     <Product id="12345"
+      title="Apple iPhone 11 [64GB, Purple] + Carrier Subscription [Cricket Wireless]"
+      price={999}
+      rating={5}
+
+        image="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=80&.v=1629842667000">
+        </Product>
+
+        <Product id="334314878"
+      title="AmazonBasics 564 L Side-by-Side Door Refrigerator (Silver Steel Finish)"
+      price={999}
+      rating={5}
+      image="https://www.businessinsider.in/thumb/msid-86003253,width-640,resizemode-4/Master.jpg" >
+        </Product>
+
+        <Product id="4563173737367"
+      title="June Rocking Chair With Blue Upholstery"
+      price={999}
+      rating={5}
+      image="https://ii1.pepperfry.com/media/catalog/product/j/u/568x625/june-rocking-chair-with-blue-upholstery-by-trendsbee-june-rocking-chair-with-blue-upholstery-by-tren-lj8uy2.jpg">
+        </Product>
+
+    </div>
+
        
      
       </div>
